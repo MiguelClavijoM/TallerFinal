@@ -11,7 +11,7 @@ public class Transacciones {
   private String id_cuenta;
   private String tipo_cuentaDestino;
 
-  public Transacciones(String fecha, String hora, String tipo_transaccion, Double monto, String id_cuenta, String tipo_cuentaDestino) {
+  public Transacciones(String fecha, String hora, String tipo_transaccion, String tipoTransaccion, Double monto, String id_cuenta, String tipo_cuentaDestino) {
     this.fecha = fecha;
     this.hora = hora;
     this.tipo_transaccion = tipo_transaccion;

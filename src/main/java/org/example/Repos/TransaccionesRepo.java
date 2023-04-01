@@ -93,7 +93,7 @@ public class TransaccionesRepo implements ICrud{
         String id_cuentaResultado = resultadoConsulta.getString("id_cuentaResultado");
         String tipo_cuentaDestino = resultadoConsulta.getString("tipo_cuentaDestino");
 
-        transacciones = new Transacciones(fecha, hora, tipo_transaccion, monto, id_cuentaResultado, tipo_cuentaDestino);
+        transacciones = new Transacciones(fecha, hora, tipo_transaccion, tipo_transaccion, monto, id_cuentaResultado, tipo_cuentaDestino);
         return transacciones;
       }
 
@@ -123,7 +123,7 @@ public class TransaccionesRepo implements ICrud{
           String id_cuenta = resultadoConsulta.getString("id_cuenta");
           String tipo_cuentaDestino = resultadoConsulta.getString("tipo_cuentaDestino");
 
-          transacciones = new Transacciones(fecha, hora, tipo_transaccion, monto, id_cuenta, tipo_cuentaDestino);
+          transacciones = new Transacciones(fecha, hora, tipo_transaccion, tipo_transaccion, monto, id_cuenta, tipo_cuentaDestino);
           transaccionList.add(transacciones);
         }
         return transaccionList;

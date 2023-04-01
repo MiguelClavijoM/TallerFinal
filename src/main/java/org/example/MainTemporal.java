@@ -11,7 +11,7 @@ public class MainTemporal {
     UsuarioRepo personita = new UsuarioRepo();
     personita.guardar(persona);
 
-    Transacciones transaccion = new Transacciones("30/03/2023", "21:24", "deposito", 5000.0,"654","Ahorros");
+    Transacciones transaccion = new Transacciones("30/03/2023", "21:24", "deposito", tipo_transaccion, 5000.0,"654","Ahorros");
     TransaccionesRepo minitransaccion = new TransaccionesRepo();
     minitransaccion.guardar(transaccion);
 
