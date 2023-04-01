@@ -4,27 +4,36 @@ import java.util.Date;
 
 public class Transacciones {
   private String id;
-  private Date fecha;
-  private Date hora;
+  private String fecha;
+  private String hora;
   private String tipo_transaccion;
   private double monto;
   private String id_cuenta;
   private String tipo_cuentaDestino;
 
-  public Date getFecha() {
+  public Transacciones(String fecha, String hora, String tipo_transaccion, Double monto, String id_cuenta, String tipo_cuentaDestino) {
+    this.fecha = fecha;
+    this.hora = hora;
+    this.tipo_transaccion = tipo_transaccion;
+    this.monto = Double.parseDouble(String.valueOf(monto));
+    this.id_cuenta = id_cuenta;
+    this.tipo_cuentaDestino = tipo_cuentaDestino;
+  }
+
+  public String getFecha() {
     return fecha;
   }
 
   public void setFecha(Date fecha) {
-    this.fecha = fecha;
+    this.fecha = String.valueOf(fecha);
   }
 
-  public Date getHora() {
+  public String getHora() {
     return hora;
   }
 
   public void setHora(Date hora) {
-    this.hora = hora;
+    this.hora = String.valueOf(hora);
   }
 
   public String getTipo_transaccion() {
@@ -57,5 +66,11 @@ public class Transacciones {
 
   public void setTipo_cuentaDestino(String tipo_cuentaDestino) {
     this.tipo_cuentaDestino = tipo_cuentaDestino;
+
+
+  }
+
+  public void add(Transacciones transacciones) {
+
   }
 }
