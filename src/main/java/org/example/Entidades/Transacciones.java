@@ -1,4 +1,4 @@
-package org.example.Entiedades;
+package org.example.Entidades;
 
 import java.util.Date;
 
@@ -67,10 +67,6 @@ public class Transacciones {
   public void setTipo_cuentaDestino(String tipo_cuentaDestino) {
     this.tipo_cuentaDestino = tipo_cuentaDestino;
 
-
-  }
-
-  public void add(Transacciones transacciones) {
 
   }
 }

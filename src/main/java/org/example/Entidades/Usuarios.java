@@ -1,4 +1,4 @@
-package org.example.Entiedades;
+package org.example.Entidades;
 
 public class Usuarios {
   private String id;
@@ -44,8 +44,5 @@ public class Usuarios {
     this.cedula = cedula;
   }
 
-  public void add(Usuarios usuarios) {
-
-  }
 }
 

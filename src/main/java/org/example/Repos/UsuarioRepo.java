@@ -1,6 +1,6 @@
 package org.example.Repos;
 
-import org.example.Entiedades.Usuarios;
+import org.example.Entidades.Usuarios;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -62,7 +62,7 @@ import java.util.List;
       try (Connection conexion = DriverManager.getConnection(cadenaConexion)) {
         Usuarios usuarios = (Usuarios) objeto;
         String sentenciaSql = "UPDATE Usuarios SET nombre = '" + usuarios.getNombre() + "', apellido = '"
-          + usuarios.getApellido() + "' WHERE cedula = '" + usuarios.getCedula() + "';";
+          + usuarios.getApellido() + "', cedula = '" + usuarios.getCedula() + "';";
         Statement sentencia = conexion.createStatement();
         sentencia.execute(sentenciaSql);
       } catch (SQLException e) {
@@ -113,7 +113,7 @@ import java.util.List;
             String cedula = resultadoConsulta.getString("cedula");
 
             usuarios = new Usuarios(nombre, apellido, cedula);
-            usuarios.add(usuarios);
+            usuariosList.add(usuarios);
           }
           return usuariosList;
         }

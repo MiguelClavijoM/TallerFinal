@@ -1,7 +1,6 @@
 package org.example.Repos;
 
-import org.example.Entiedades.Transacciones;
-import org.example.Entiedades.Usuarios;
+import org.example.Entidades.Transacciones;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -106,7 +105,7 @@ public class TransaccionesRepo implements ICrud{
 
 
   public List<?> listar() {
-    List<Usuarios> transaccionList = new ArrayList<Usuarios>();
+    List<Transacciones> transaccionList = new ArrayList<>();
 
     try (Connection conexion = DriverManager.getConnection(cadenaConexion)) {
       String sentenciaSql = "SELECT * FROM Transacciones";
@@ -123,8 +122,9 @@ public class TransaccionesRepo implements ICrud{
           Double monto = Double.valueOf(resultadoConsulta.getString("monto"));
           String id_cuenta = resultadoConsulta.getString("id_cuenta");
           String tipo_cuentaDestino = resultadoConsulta.getString("tipo_cuentaDestino");
+
           transacciones = new Transacciones(fecha, hora, tipo_transaccion, monto, id_cuenta, tipo_cuentaDestino);
-          transacciones.add(transacciones);
+          transaccionList.add(transacciones);
         }
         return transaccionList;
       }
