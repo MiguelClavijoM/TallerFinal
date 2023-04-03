@@ -39,7 +39,7 @@ public class UsuariosServicio {
     repositorioUsuario.eliminar(identificador);
   }
 
-  public void actualizarUsuarios(Map datos) {
+  public void actualizarUsuarios(int id, Map datos) {
     String nombre = (String) datos.get("nombre");
     String apellido = (String) datos.get("apellido");
     String cedula = (String) datos.get("cedula");
